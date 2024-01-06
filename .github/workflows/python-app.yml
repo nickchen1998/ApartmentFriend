@@ -17,9 +17,8 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      Test: 'True'
+      Test: True
       SECRET_KEY: 'Test'
-
 
     steps:
     - uses: actions/checkout@v3
