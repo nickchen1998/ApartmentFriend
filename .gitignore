@@ -1,0 +1,11 @@
+.idea/
+venv/
+__pycache__/
+chromedriver.exe
+.pytest_cache/
+.env
+mongo/
+*/migrations/*
+!*/migrations/__init__.py
+db.sqlite3
+poetry.lock

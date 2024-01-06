@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Table Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="bg-light rounded h-100 p-4">
+                    <h6 class="mb-4">開發者資訊</h6>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">名稱</th>
+                                <th scope="col">GitHub 帳號</th>
+                                <th scope="col">GitHub 連結</th>
+                                <th scope="col"> 聯繫方式</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>陳柏翰</td>
+                                <td>nickchen1998</td>
+                                <td>
+                                    <a href="https://github.com/nickchen1998" target="_blank">https://github.com/nickchen1998</a>
+                                </td>
+                                <td>nickchen1998@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>葛孝宣</td>
+                                <td>HsiaoHsuan</td>
+                                <td>
+                                    <a href="https://github.com/HsiaoHsuan" target="_blank">https://github.com/HsiaoHsuan</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Table End -->
+{% endblock %}
+
+{% block javascript %}
+<script>
+    document.getElementById("info-page").classList.add("active");
+</script>
+{% endblock %}

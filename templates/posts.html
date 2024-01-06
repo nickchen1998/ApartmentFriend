@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Table Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <!-- Item Start -->
+            <div class="col-sm-12 col-xl-6">
+                <h3 class="title_list">標題</h3>
+                <div class="row g-4">
+                    <!-- Item Left Start -->
+                    <div class="col-sm-12 col-xl-7">
+                        <div>
+                            <p>台北市大安區大安路一段16巷13號</p>
+                            <p class="space_style">
+                                <em>13.00 坪</em>
+                                <em>1房 --廳 1衛</em>
+                                <em>3/8樓</em>
+                                <em>獨立套房</em>
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- Item Left End -->
+
+                    <!-- Item Right Start -->
+                    <div class="col-sm-12 col-xl-5">
+                        <ul>
+                            <li>租金：20000 元</li>
+                            <li>聯絡人：陳先生</li>
+                            <li>更新：2 小時前</li>
+                            <li>原文網址：
+                                <a href="https://rent.591.com.tw/rent-detail-13778586.html" target="_blank"
+                                   class="btn_default">網址</a></li>
+                        </ul>
+                    </div>
+                    <!-- Item Right End -->
+                </div>
+            </div>
+            <!-- Item End -->
+        </div>
+    </div>
+    <!-- Table End -->
+{% endblock %}
+
+{% block javascript %}
+<script>
+    document.getElementById("posts-page").classList.add("active");
+</script>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Table Start -->
+    <div class="container-fluid pt-4 px-4">
+        {% if not task_list %}
+            <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
+                <div class="col-md-6 text-center p-4">
+                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
+                    <h1 class="mb-4">尚無任務</h1>
+                    <p class="mb-4">目前沒有爬蟲任務存在於系統當中，請聯絡系統管理員</p>
+                </div>
+            </div>
+        {% else %}
+            <div class="row g-4">
+                {% for object in results %}
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">任務名稱：{{ object.task.name }}，ID：{{ object.task.id }}</h6>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Start Time</th>
+                                    <th scope="col">End Time</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for run in object.runs %}
+                                    <tr>
+                                        <td>{{ run.index }}</td>
+                                        <td>{{ run.status }}</td>
+                                        <td>{{ run.start_time }}</td>
+                                        <td>{{ run.end_time }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    </div>
+    <!-- Table End -->
+{% endblock %}
+
+{% block javascript %}
+<script>
+    document.getElementById("tasks-page").classList.add("active");
+</script>
+{% endblock %}
