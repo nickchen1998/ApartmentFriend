@@ -7,13 +7,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django = "^5.0.1"
+django = "5.0.1"
 celery = "^5.3.6"
 pydantic-settings = "^2.1.0"
 requests = "^2.31.0"
 selenium = "^4.16.0"
 fake-useragent = "^1.4.0"
 redis = "^5.0.1"
+mysqlclient = "^2.2.1"
 
 
 [build-system]
